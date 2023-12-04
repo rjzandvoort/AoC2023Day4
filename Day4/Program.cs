@@ -19,8 +19,7 @@ namespace Day4
         {
             var txt = File.ReadAllText("input.txt");
             long totalPoints = 0;
-            txt = txt.Replace("\r", "");
-            // Make an array
+            txt = txt.Replace("\r", "");            
             foreach (var lin in txt.Split('\n'))
             {
                 var lps = lin.Split(':')[1].Split('|');
@@ -44,8 +43,8 @@ namespace Day4
             txt = txt.Replace("\r", "");
             var allCards = new Dictionary<int, long>();
             var allLines = txt.Split('\n');
-            for (int i = 1; i <= allLines.Length; i++) allCards.Add(i, 1);
-            // Make an array
+            // Init cards to 1
+            for (int i = 1; i <= allLines.Length; i++) allCards.Add(i, 1);            
             int cardNr = 1;
             foreach (var lin in allLines)
             {
